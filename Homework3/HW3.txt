@@ -1,0 +1,26 @@
+
+Homework 3: Performance
+Investigate the performance of different elements of GLSL.  Examples of things
+you may investigate is float vs. int, performance of constructs like if,
+select, builtin functions vs. explicit calculaton, the cost of transcendental
+functions, inline code vs. function calls, performance differences between
+different video cards or operating systems, etc.
+
+What the program should do is left to your imagination.  The scene could
+involve lighting, textures, and similar features, but the assignment is to
+investigate performance of different ways of doing things.
+
+Make sure you disable VSYNC so that this measures to true frame rate.
+
+What to submit:
+
+1) README with discussion of results and brief instructions on how to use the
+program;
+
+2) One ZIP or TAR archive containing all files you are submitting;
+
+3) Source code (shader and program), .pro and any data files I need;
+
+4) Time it took you to complete the assignment.
+
+The discussion of the results is the main deliverable for this homework.

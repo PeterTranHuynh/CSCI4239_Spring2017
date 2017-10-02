@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hw2a.vert</file>
+        <file>hw2a.frag</file>
+        <file>hw2b.frag</file>
+        <file>suzanne.obj</file>
+        <file>suzanne.mtl</file>
+        <file>hw2c.frag</file>
+        <file>hw2d.frag</file>
+        <file>hw2c.vert</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,50 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Final Project
+
+---Project-Description---
+Overall, I tried to accomplish as much as I could within this food cooking scenes I decided to set out on making.
+I managed to implement all of the following:
+- Shader Lighting
+- Shader Textures
+- Particle Arrays for Smoke and Stove flame
+- All three of these are then applied to objects within the scene
+- A transparent noise and distortion cube above the cooking donut to emulate steam and heat waves.
+(This took longer than I expected to figure out. Essentially, I wanted to have both GL Depth Testing and Blending on at the same time.
+I implemented a quick workaround, disabling Depth testing for the transparent block and switching it with blending)
+- Moderately Populated scenes environment (To help compensate for iOS to standard OpenGL switch-over.)
+
+In total, I created 5 individual shaders to accomplish this project.
+1) The Background skybox shader, with simple texture mapping, setting a better environment for ambient lighting, but not affected by lighting itself.
+2) Object Shader with texture mapping an lighting based off one singular point. The point is set to be behind the camera at reset and startup.
+3) Particle shader for char flying up from the donut. This was based off the small particle example. I set the particles to flow up quickly and die fast above the donut.
+4) Particle shader for stove fire. This was based off of the lame bambi fire large particle example. I changed the particle image and made the flame less pyramid-like in movement.
+5) Noise and distortion based of the noise texture mapping example with static cubes. I reduced the transparency of the object and moved the direction of the flow to wave like heat.
+
+To run the program, simply run in QT
+>> Run qmake, build, run, or use the commands on a bash terminal:
+>> qmake
+>> make
+(make clean for clean-up)
+
+To use the program, simple drag and move using the mouse to view the scene.
+
+
+---Assignment-Description---
+Note that this is due WEDNESDAY of the last week of class at 8am.
+THERE IS NO GRACE PERIOD FOR THIS DEADLINE.
+
+What to submit:
+1) Source code and makefile and anything else necessary to run the program;
+2) Readme describing how to run the program;
+3) Anything else I should know about the project.
+
+I expect all graduate students to do present their projects during the last class period.  However, it is in your best interest to present if you are an undergraduate as well.
+
+Make sure you project compiles and runs cleanly under Linux.  There should be no warnings, case sensitivity, or issues with the nVidia compiler which is very prone to throwing errors that AMD will let slide.
+
+PLEASE CHECK MY COMMENTS. If I run into an issue compiling or running the program you may need to correct.  However, do not reply on the ability to resubmit in what you turn in.
+
+Make sure your README points out things you are proud of and want me to take note of.

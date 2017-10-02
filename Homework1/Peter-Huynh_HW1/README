@@ -1,0 +1,35 @@
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 1
+
+ESTIMATED TIME SPENT: 7 hours and 00 minutes (mostly QT Setup and fixing on Windows)
+
+Thank you to Diana Southard for helping with scrollers
+
+---Description---
+ NDC to RGB shader
+ Color of every vertex in every object should be set using a shader such
+ that the coordinates of the vertex in Normalized Device Coordinates (-1 to +1
+ in x,y,z) determines the color of the vertex. 
+
+ DONE IN ONE LINE IN vertex file and frag file.
+
+---Folders---
+Peter-Huynh_HW1             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+hw1.out                     - qt Build file
+~.vert / ~.frag             - Shader files
+~.mtl / ~.obj               - Objects imported
+
+---Executables---
+./hw1                       - Executable version of the assignment
+
+
+---Key-Bindings---
+ Scrollers allow for object movement of the obj money face file
+ Scroll menus lets you change settings

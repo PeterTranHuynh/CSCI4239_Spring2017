@@ -1,0 +1,75 @@
+OpenCL square matrix multiplier
+
+Willem A. (Vlakkies) Schreuder
+CSCI4229/5229 Fall 2016
+
+The size of the matrix is width*blocks
+-------------------------
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 10 - GPU Computing
+
+---ESTIMATED-TIME-SPENT--- 
+19 hours and 30 minutes 
+
+---Description---
+Create a program that uses CUDA or OpenCL to speed up calculations.  Compare
+the speed of a CPU based implementation with a GPU implementation.
+
+It is NOT acceptable to simply take my examples and adding meaningless
+computations to the matrix operations.  You need to attempt a meaningful
+computation using the GPU.  In order to see a benefit from the GPU computing,
+you will likely have to operate on a large data set.
+
+---Results---
+Using example 24 as the initial template, I modified the matrices to collect data from text
+files generated off my an IMU's gyroscope. This data provides the roll, pitch, and yaw of a
+robot I'm making for my advance robotics class. These three pieces of info are then calculated
+into a singled filtered vector (Within Eh) at every given data point.
+The purpose of this filtered vector is to help give value and rankings to orientations.
+
+I hope to use this hw to quickly generate more filtered data from my IMU sensor to save time and
+spit out a new text file later on.
+
+Originally I tried using CUDA for this assignment, got everything install, but ran into massive issues
+where nvcc ran into a missing dependencies that I had to port over from Visual Studio 2010 files paths
+to remedy; but then the configuration of Cl.exe did not match various parts of CUDA's nvcc compiler.
+So, I downloaded a bat script online to have it reconfigured, only to find out that the dependency wasn't
+supporting the latest version of the compiler and that x86 variants were installed instead of x64.
+After downloading a newer correct version and getting the script running, I ran into issues involving
+ubuntu bash for windows and modprobe not being unstable for running the nvcc and opencl compilers.
+So I decided to jump over to my VM in hopes to setup a workaround to allow a VM to call graphic card processing.
+It did not work, even after downloading everything for CUDA and OpenCL and setting up virtualbox to allow for
+graphics card properties.
+I then gave up, and starting developing this assignment in the CSEL computer labs, but some of the
+computers did not have CUDA or OpenCL Lib/Tools.
+I opted to borrowing a friend's computer to get this assignment done in native linux, as it was a much simplier
+setup than Windows.
+
+Overall, when I tested, I saw reasonable speedup in calculations. Roughly 1.2-1.7 on matrices above 10,000x10,000
+
+This project was originally done on Windows 10, but migrated to Ubuntu 14.
+I have a GTX 730M for my Windows device, but the Ubuntu computer my friend let me use had a beautiful GTX 1080 (Not sure of the specific brand variant)
+
+---Folders---
+Peter-Huynh_HW10             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+~.out  / ~.o                - Linker Files
+~.txt                       - Data Files
+
+---Executable-Commands---
+make                        - Compiles file into an executable
+make clean                  - Cleans linker and executables
+./hw10                      - Executable version of the assignment
+
+---GUI---
+Command line parameters
+  -v      Verbose - show hardware detila
+  width   Block width (width squared <= max threads/block)
+  blocks  Number of blocks

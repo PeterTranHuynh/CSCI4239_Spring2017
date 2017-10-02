@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>hw4.vert</file>
+    <file>hw4.frag</file>
+    <file>crate.png</file>
+</qresource>
+</RCC>

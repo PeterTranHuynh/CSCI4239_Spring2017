@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>Hw7.frag</file>
+    <file>doge.png</file>
+    <file>fabio.png</file>
+</qresource>
+</RCC>

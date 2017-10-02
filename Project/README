@@ -1,0 +1,54 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Project Proposal
+
+---Project-Proposal---
+I would like to spent the next six weeks working on an iOS app that uses OpenGL ES 2.0.
+I hope to animate some sort of scene involving cooking food. This can be done through
+shaders as I plan to add simple noise and distortion (heat rippling) shaders on a 
+food items that has lighting & texture. The scene will be relatively simple, as iOS dev
+seems to be the limiting factor for this project, but should provide a sizable challenge.
+I intend on implementing other topics taught in the class as well.
+
+Things I will definitely do:
+- iOS OpenGL
+- Texture for food
+- Shaders for lighting, noise/distortion
+
+Things I will do if time permits / Stretch Goals:
+- Particle Shader to animate smoke or ash (over cooking based on a timer)
+
+
+---Assignment-Description---
+Describe in about a page the project you want to do. Include as much detail as 
+you have right now. The purpose of this assignment is to have you think through 
+what it is that you want to do, what it is going to take, and what you can get 
+done by the end of the semester.
+
+You have six weeks to complete the project.  I expect an effort
+approximately equal to all of the homeworks combined, so make sure that your 
+project is sufficiently ambitious.  DO NOT leave this until the last week.
+Also remember that the project counts as half the grade.
+
+To help you stay on track, you should have at least something that will compile 
+and run by April 20 for me to review. The projects should be ready for final 
+review by the last week of class.
+
+If you are writing a graphical front end to a simulator or data analysis
+program, make sure that you don't bite off more than you can chew as far as the 
+"physics" are concerned. The same is true for writing a game. Concentrate on the 
+graphical end of it, not making the game elements do clever things.
+
+It is very important that you make clear what you will definitely do, and what
+you will do as time allows.  I am basing my judgment of the sufficiency of
+your proposal on what you will definitely do, and will hold you to that in the
+final submittal.
+
+Let me know what your stretch goals are.  If your proposal is not sufficiently
+ambitious, I can use that to suggest which of the stretch goals you should
+commit to do.
+
+PLEASE REVIEW MY FEEDBACK ON THIS ASSIGNMENT. If your project is not sufficiently
+advanced, I will let you know in the feedback.

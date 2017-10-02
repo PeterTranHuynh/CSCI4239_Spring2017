@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Assets/donut_chocolate.bmp</file>
+        <file>Assets/donut_pink.bmp</file>
+        <file>Assets/donut_sugar.bmp</file>
+        <file>Assets/torus.mtl</file>
+        <file>Assets/torus.obj</file>
+        <file>Assets/stove_metal.bmp</file>
+        <file>Assets/stove_top.mtl</file>
+        <file>Assets/stove_top.obj</file>
+        <file>Assets/ember_particle.png</file>
+        <file>Shaders/smoke.vert</file>
+        <file>Shaders/stove_flame.frag</file>
+        <file>Shaders/stove_flame.vert</file>
+        <file>Shaders/object_lighting.frag</file>
+        <file>Shaders/object_lighting.vert</file>
+        <file>Assets/floor.bmp</file>
+        <file>Shaders/background.frag</file>
+        <file>Assets/wall1.bmp</file>
+        <file>Assets/wall2.bmp</file>
+        <file>Assets/wall3.bmp</file>
+        <file>Assets/wall4.bmp</file>
+        <file>Assets/brushed_metal.png</file>
+        <file>Assets/oven.mtl</file>
+        <file>Assets/oven.obj</file>
+        <file>Shaders/distort.frag</file>
+        <file>Shaders/distort.vert</file>
+        <file>Assets/wood.bmp</file>
+        <file>Assets/plate.mtl</file>
+        <file>Assets/plate.obj</file>
+        <file>Assets/platePot.bmp</file>
+        <file>Assets/donut_plain.bmp</file>
+        <file>Assets/cylinder.obj</file>
+        <file>Assets/cylinder.mtl</file>
+    </qresource>
+</RCC>

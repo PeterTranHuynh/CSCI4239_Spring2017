@@ -1,0 +1,46 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 8 - Textures for Data Storage
+---ESTIMATED-TIME-SPENT--- 
+9 hours and 30 minutes 
+
+---Description---
+Create a program using GLSL that uses textures for data storage.
+
+This is a free form assignment.  You can use textures to store functional
+relations, translations, noise, bump maps, or any similar application.
+
+---Results---
+Using example 17 as the initial template, I implemented an color inverted flowing noise for 2D, 3D and 4D
+classic and simplex noise textures with an overlaying coordinate noise. this is done through a series
+of processes. First, the float n for color noise is iterated through a loop where it is calculated with
+some variance. The texture vector is also then multiplied by an matrix to reflect the effects of the 
+noise and snoise functions from ex17. The color vector is then set to T3 and multiplied by some random
+variable generated from T3 for a static overlay.
+
+Thanks to Diana Southard for helping with the matrix rotation portion!
+
+---Folders---
+Peter-Huynh_HW8             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+~.out  / ~.o                - Linker Files
+~.qrc  / ~.out              - qt Build files
+~.vert / ~.frag             - Shader files
+~.mtl  / ~.obj              - Objects files imported
+
+---Executable-Commands---
+qmake                       - Auto-generates make file
+make                        - Compiles file into an executable
+make clean                  - Cleans linker and executables
+./Hw7                       - Executable version of the assignment
+
+---GUI---
+ Mouse Click and allow for rotation of scene for drawn objects
+ Scroll and sliders are menus that let you change scene choices
+ Displays data of the scene and screen information

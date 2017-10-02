@@ -1,0 +1,26 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>hw3b.vert</file>
+    <file>hw3c.vert</file>
+    <file>hw3d.vert</file>
+    <file>hw3e.vert</file>
+    <file>hw3a.frag</file>
+    <file>hw3b.frag</file>
+    <file>hw3c.frag</file>
+    <file>hw3d.frag</file>
+    <file>hw3e.frag</file>
+    <file>cruiser.obj</file>
+    <file>cruiser.mtl</file>
+    <file>cruiser.png</file>
+    <file>crate.png</file>
+    <file>pi.png</file>
+	<file>hw2a.vert</file>
+    <file>hw2a.frag</file>
+    <file>hw2b.frag</file>
+    <file>suzanne.obj</file>
+    <file>suzanne.mtl</file>
+    <file>hw2c.frag</file>
+    <file>hw2d.frag</file>
+    <file>hw2c.vert</file>
+</qresource>
+</RCC>

@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>hw09a.vert</file>
+    <file>hw09b.vert</file>
+    <file>hw09b.frag</file>
+    <file>particle.png</file>
+</qresource>
+</RCC>

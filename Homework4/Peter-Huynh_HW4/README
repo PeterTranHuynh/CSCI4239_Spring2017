@@ -1,0 +1,48 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 4 - OpenGL 3 and 4
+
+---ESTIMATED-TIME-SPENT--- 
+6 hours and 00 minutes 
+
+---Description---
+Create a program that uses shaders in the OpenGL 3 or 4 style, that is using the
+in and out qualifiers to pass variables into or between shaders and pass variables 
+such as the transformation matrices and light properties into the shader as uniforms.
+
+The program must implement lighting and textures, and define the scene using
+vertex buffer objects.
+
+I recommend you start with Example 6 and add lighting and textures to my shaders.
+
+According to Apple, OpenGL 4.1 is supported on Macs built from 2011 onwards.  Older Macs only supports OpenGL 3.3
+
+---Results---
+Using example 6 as the initial template, and HW 2 and 3 FRAG and VERT shaders, I implemented lighting
+in the vertex shader similar to previous HWs, then ported it as an input for the fragement shader
+This was then set as uniforms within the OpenGL widget.
+
+---Folders---
+Peter-Huynh_HW4             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+~.out / ~.o                 - Linker Files
+~.qrc / ~.out               - qt Build files
+~.vert / ~.frag             - Shader files
+~.mtl / ~.obj               - Objects files imported
+
+---Executable-Commands---
+qmake                       - Auto-generates make file
+make                        - Compiles file into an executable
+make clean                  - Cleans linker and executables
+./hw4                       - Executable version of the assignment
+
+---GUI---
+ Mouse Click and allow for rotation of scene for drawn objects
+ Scroll and sliders are menus that let you change scene choices
+ Displays data of the scene and screen information

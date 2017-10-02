@@ -1,0 +1,54 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 7 - Image Processing
+
+---ESTIMATED-TIME-SPENT--- 
+5 hours and 30 minutes 
+
+---Description---
+Create a program that performs image processing using GLSL.
+
+This is a very domain specific assignment, but the applications are very wide
+ranging.  Some examples are
+
+1)  Spatial transformations such as sharpening, blurring, edge detection, etc;
+2)  Color transformations;
+3)  Resampling transformations such as averaging, anti-aliasing;
+4)  Multi-image operations;
+5)  Special effects.
+
+Anybody who can write a shader that will sharpen an image so you can read the
+license plate from the reflection on somebody's sunglasses gets an automatic A+
+in this class.
+
+Hint:  If you need to write to a buffer that is a different size than the
+window, Example 12 shows how to create a framebuffer object.
+
+---Results---
+Using example 13 as the initial template, I implemented a pixelation image processor, along with
+shaders swapping RGB values of two images and another one scaling RGB values for inverse colors
+
+---Folders---
+Peter-Huynh_HW7             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+~.out  / ~.o                - Linker Files
+~.qrc  / ~.out              - qt Build files
+~.vert / ~.frag             - Shader files
+~.mtl  / ~.obj              - Objects files imported
+
+---Executable-Commands---
+qmake                       - Auto-generates make file
+make                        - Compiles file into an executable
+make clean                  - Cleans linker and executables
+./Hw7                       - Executable version of the assignment
+
+---GUI---
+ Mouse Click and allow for rotation of scene for drawn objects
+ Scroll and sliders are menus that let you change scene choices
+ Displays data of the scene and screen information

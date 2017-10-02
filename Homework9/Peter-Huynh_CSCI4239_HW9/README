@@ -1,0 +1,50 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 9 - Particle Systems and Advanced Shaders
+
+---ESTIMATED-TIME-SPENT--- 
+4 hours and 30 minutes 
+
+---Description---
+For this assignment you can implement a particle engine or an advanced shader such
+as a geometry, tesselation or compute shader.
+
+If you choose to implement a particle engine, you can do small or large
+particles, but it must be shader based, not CPU based.  For large particles
+point sprites may be desirable.
+
+Alternatively, you can create a program that uses one of the newer shader types
+such as a geometry, tesselation or compute shader.
+
+What to draw is up to you.  Choose something that illustrates the techniques you
+are implementing.
+
+---Results---
+Using example 19 as the initial template, I used both a small and large particle creations to make a 
+simple raining particle animation (small particles) and a moving comet (large particle).
+This is done via the shader files that take in the openGL widget particle field instance.
+
+---Folders---
+Peter-Huynh_HW9             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+~.out  / ~.o                - Linker Files
+~.qrc  / ~.out              - qt Build files
+~.vert / ~.frag             - Shader files
+~.mtl  / ~.obj              - Objects files imported
+
+---Executable-Commands---
+qmake                       - Auto-generates make file
+make                        - Compiles file into an executable
+make clean                  - Cleans linker and executables
+./Hw9                       - Executable version of the assignment
+
+---GUI---
+ Mouse Click and allow for rotation of scene for drawn objects
+ Scroll and sliders are menus that let you change scene choices
+ Displays data of the scene and screen information

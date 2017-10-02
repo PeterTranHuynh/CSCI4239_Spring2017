@@ -1,0 +1,34 @@
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 2
+
+ESTIMATED TIME SPENT: 8 hours and 00 minutes 
+
+Credit to Josh Killinger's Github for helping me get started in shader creation
+Credit to Diana Southard's Github for timer
+
+---Description---
+ Procedural Textures
+  A program that allows a scene to be viewed in 3D from any direction under user 
+  control. The objects in the scene should be colored using a procedural texture 
+  shader.
+
+---Folders---
+Peter-Huynh_HW1             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+hw1.out                     - qt Build file
+~.vert / ~.frag             - Shader files
+~.mtl / ~.obj               - Objects imported
+
+---Executables---
+./hw1                       - Executable version of the assignment
+
+
+---Key-Bindings---
+ Scrollers allow for object movement of the obj monkey face file
+ Scroll menus lets you change settings

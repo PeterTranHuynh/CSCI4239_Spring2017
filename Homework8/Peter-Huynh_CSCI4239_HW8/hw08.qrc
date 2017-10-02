@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>hw08.vert</file>
+    <file>hw08.frag</file>
+    <file>bunny.obj</file>
+</qresource>
+</RCC>

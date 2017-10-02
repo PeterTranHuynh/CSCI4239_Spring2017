@@ -1,0 +1,52 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 5 - WebGL
+
+---ESTIMATED-TIME-SPENT--- 
+7 hours and 30 minutes 
+
+---Description---
+At a minumum you need to add lighting and textures to Ex 8 and draw a different
+3D solid object.
+
+You may use Apple's CanvasMatrix library of functions provided in class or an
+equivalent library to provide the transformation functions needed since I am
+assuming that you know how to do transformations from the previous class.
+However, you may NOT use libraries to create the objects.  The purpose of this
+assignment is to give you some exposure to how objects are built in OpenGL ES.
+
+You MAY NOT use the Three.js library or equivalent packages that does all the
+OpenGL calls for you.  The reason is that it abstracts the objects and controls
+to the extent that you never see WebGL.  I want you to see how WebGL actually
+uses OpenGL ES 2.0.
+
+There are a lot of new things to cope with here (HTML, Javascript and OpenGL
+ES), so I don't expect you to draw a very complex scene, but I do want you to
+make sure you can explain every line of code.
+
+---Results---
+Using example 8 as the initial template, and HW 2, 3 and 5 FRAG and VERT shaders, I implemented lighting
+in the vertex shader, then ported it as an input for the fragement shader.
+This was then set as uniforms within the display function within the WebGL scripting. I also tried to implement
+a texture onto the objects. Instead, I decided to mess around with vertex precision and create randomly generated static,
+similar to old fashion / low reception analog tv
+When I tried to bind the texture, the program would switch to a black screen for the webgl display.
+Tested on Chrome and Mozilla Firefox.
+CREDITS: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+         https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
+
+---Folders---
+Peter-Huynh_HW5             - Assignment description and documentation ZIPPED
+
+---Files---
+~.js                        - Javascript file
+~.html                      - Hypertext WebGL project
+README                      - This file
+
+---Executable-Commands---
+Open html in a browser      - Auto-reads WebGL via a javascript piece in HTML
+
+---GUI---
+ Mouse Click and allow for rotation of scene for drawn objects

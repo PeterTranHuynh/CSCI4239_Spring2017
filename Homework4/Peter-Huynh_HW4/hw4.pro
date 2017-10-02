@@ -1,0 +1,9 @@
+TEMPLATE += app
+CONFIG += console c++11
+CONFIG -= app_bundle
+CONFIG -= qt
+QT += opengl gui declarative core widgets
+HEADERS = hw4viewer.h hw4opengl.h CUgl.h Object.h Type.h
+SOURCES = hw4.cpp hw4viewer.cpp hw4opengl.cpp CUgl.cpp Object.cpp
+RESOURCES = hw4.qrc
+LIBS += -lopengl32 -lglu32

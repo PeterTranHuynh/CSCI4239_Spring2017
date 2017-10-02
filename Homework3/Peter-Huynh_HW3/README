@@ -1,0 +1,121 @@
+Peter Tran Huynh
+CSCI 4239 (Advance Graphics)
+Spring 2017
+University of Colorado Boulder
+Homework 3 - Performance
+
+---ESTIMATED-TIME-SPENT--- 
+8 hours and 45 minutes 
+
+---Description---
+Investigate the performance of different elements of GLSL.  Examples of things
+you may investigate is float vs. int, performance of constructs like if,
+select, builtin functions vs. explicit calculaton, the cost of transcendental
+functions, inline code vs. function calls, performance differences between
+different video cards or operating systems, etc.
+
+What the program should do is left to your imagination.  The scene could
+involve lighting, textures, and similar features, but the assignment is to
+investigate performance of different ways of doing things.
+
+Make sure you disable VSYNC so that this measures to true frame rate.
+
+---Results---
+Using example 4 as an initial starting point, I decided to add some minor modifications
+to the program to display better framerate (No vSync), screen pixel amount and resolutions.
+After those modifications, I also added the shaders and models from the previous assignment.
+
+I decided to test the performance of the program, its shaders and framerate on two different
+laptops with similar configurations, with varying window sizes
+
+The specs of both devices are given below:
+OS:          Windows 10 Home 64-bit          Windows 7 Ultimate 64-bit
+Owner:       Me                              My Brother
+Brand:       Alienware                       Alienware
+Year:        2013                            2014
+Model:       14 Rev.1                        Mx17 Rev.4
+CPU:         Intel i7 4700MQ @ 2.4Ghz        Intel i7 3720QM @ 2.6Ghz
+RAM:         8GB DDR3                        8GB DDR3
+Display:     14.2" Native 1920x1080@60Ghz    17.3" Native 1920x1080@60Ghz
+Hard Drive:  720GB SATA 7200 RPM             500GB SATA 7200 RPM
+GPU:         Nvidia GT 750M @ 2GBs           Nvidia GTX 680M @ 2GBs
+I then tested the program again on Ubuntu Linux 16.04 Natively (dual-booted) on my laptop 
+(Alienware 14).
+
+Here were the results on a 1658x915 Windowed Program (1,517,070 px) with perspective view 
+at a cube object on Qt 5.7.0 (Latest):
+              ______________________________________________________________________
+             | Alienware-14-(Win10) | Alienware-Mx17-(Win7) | Alienware-14-(Ubuntu) |
+_____________|       GT 750M        |       GTX 680M        |        GT 750M        |
+Shader       |----------------------|-----------------------|-----------------------|
+-------------|                      |                       |                       |
+None         |    510 +/- 10 FPS    |    510 +/- 10 FPS     |     410 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Stored       |    500 +/- 10 FPS    |    500 +/- 10 FPS     |     490 +/- 10 FPS    | 
+-------------|                      |                       |                       |
+Vertex Blinn |    470 +/- 10 FPS    |    480 +/- 10 FPS     |     480 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Vertex Phong |    485 +/- 10 FPS    |    480 +/- 10 FPS     |     490 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Pixel Blinn  |    455 +/- 10 FPS    |    460 +/- 10 FPS     |     450 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Pixel Phong  |    480 +/- 10 FPS    |    500 +/- 10 FPS     |     480 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Rainbow      |    500 +/- 10 FPS    |    500 +/- 10 FPS     |     500 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Meh          |    455 +/- 10 FPS    |    460 +/- 10 FPS     |     455 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Stripped     |    485 +/- 10 FPS    |    495 +/- 10 FPS     |     495 +/- 10 FPS    |
+-------------|                      |                       |                       |
+Move & Glow  |    470 +/- 10 FPS    |    495 +/- 10 FPS     |     475 +/- 10 FPS    |
+-------------|                      |                       |                       |
+              ----------------------------------------------------------------------
+*Results may vary due to background programs running
+
+As I was messing around with the configuration of the program, I noticed a few thrends 
+that weren't initially expected:
+- Regardless of which shader that was being used, the framerate was nearly consistent 
+    between the device environments.
+- The larger the window (meaning the pixels being rendered) resulted in a dip in the
+    framerate, but did not affect the overall runtime.
+- The more vertices an object had, meant more detailed lighting and normals existing,
+    this caused a drop in framerate as well, especially in Suzanne and the Ship objects.
+- The amount of vertices rendered onto the screen affected the framerate to a certain
+    degree. For example, the cube had a slightly higher framerate when only one surface
+    was visible compared to having three sides viewable in a certain angle.
+	This wasn't too significant of a change compared to screensize adjustments or vertices.
+
+I expected to see a diminishing return in runtime with framerate being inversely
+related to a number of vertices and pixels drawn. However, even with objects with high
+amounts of vertices or screens of millions of pixels drawn, on every single shader there 
+was no significant increase in the runtime or render time. Yet, framerate did diminish to
+a certain degree.
+
+Another thing that wasn't too obvious initially was the lack of difference between each
+shader's framerate. I expected there to be major differences in the fps between each shader,
+but the deviations weren't too far apart. There only seems to be a slight drop in FPS, with
+a few dozen frames.
+
+
+---Folders---
+Peter-Huynh_HW3             - Assignment description and documentation ZIPPED
+
+---Files---
+~.c                         - Source Code for the assignment
+~.h                         - Header For code
+README                      - This file
+~.out / ~.o                 - Linker Files
+~.qrc / ~.out               - qt Build files
+~.vert / ~.frag             - Shader files
+~.mtl / ~.obj               - Objects files imported
+
+---Executable-Commands---
+qmake                       - Auto-generates make file
+make                        - Compiles file into an executable
+make clean                  - Cleans linker and executables
+./hw3                       - Executable version of the assignment
+
+---GUI---
+ Mouse Click and allow for rotation of scene for drawn objects
+ Scroll and sliders are menus that let you change scene choices
+ Displays data of the scene and screen information
